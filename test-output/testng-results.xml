@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="3" failed="1" ignored="0" total="4" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="8421" started-at="2022-07-14T17:54:26Z" finished-at="2022-07-14T17:54:34Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="8421" started-at="2022-07-14T17:54:26Z" finished-at="2022-07-14T17:54:34Z">
+      <class name="com.test.OMRBranchClub">
+        <test-method status="FAIL" signature="basicAuthLogin()[pri:0, instance:com.test.OMRBranchClub@cb5822]" name="basicAuthLogin" duration-ms="8062" started-at="2022-07-14T17:54:26Z" finished-at="2022-07-14T17:54:34Z">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "exception" (class com.pojo.Login_Output_pojo), not marked as ignorable (6 known properties: "cart_count", "status", "role", "message", "data", "refer_msg"])
+ at [Source: (String)"{
+    "message": "SQLSTATE[HY000] [1040] Too many connections (SQL: select * from `g_bus_rule_ref` where `rule_name` = currency limit 1)",
+    "exception": "Illuminate\\Database\\QueryException",
+    "file": "/home/omrbranch/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php",
+    "line": 664,
+    "trace": [
+        {
+            "file": "/home/omrbranch/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php",
+            "line": 624,
+            "fu"[truncated 12817 chars]; line: 3, column: 19] (through reference chain: com.pojo.Login_Output_pojo["exception"])]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "exception" (class com.pojo.Login_Output_pojo), not marked as ignorable (6 known properties: "cart_count", "status", "role", "message", "data", "refer_msg"])
+ at [Source: (String)"{
+    "message": "SQLSTATE[HY000] [1040] Too many connections (SQL: select * from `g_bus_rule_ref` where `rule_name` = currency limit 1)",
+    "exception": "Illuminate\\Database\\QueryException",
+    "file": "/home/omrbranch/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php",
+    "line": 664,
+    "trace": [
+        {
+            "file": "/home/omrbranch/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php",
+            "line": 624,
+            "fu"[truncated 12817 chars]; line: 3, column: 19] (through reference chain: com.pojo.Login_Output_pojo["exception"])
+at io.restassured.internal.path.json.mapping.JsonPathJackson2ObjectDeserializer.deserialize(JsonPathJackson2ObjectDeserializer.java:30)
+at io.restassured.path.json.mapping.JsonPathObjectDeserializer$deserialize.call(Unknown Source)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:46)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+at io.restassured.internal.mapping.Jackson2Mapper.deserialize(Jackson2Mapper.groovy:58)
+at io.restassured.mapper.ObjectMapper$deserialize.call(Unknown Source)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:46)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+at io.restassured.internal.mapping.ObjectMapping.parseWithJackson2(ObjectMapping.groovy:254)
+at io.restassured.internal.mapping.ObjectMapping$parseWithJackson2$0.callStatic(Unknown Source)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallStatic(CallSiteArray.java:54)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callStatic(AbstractCallSite.java:217)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callStatic(AbstractCallSite.java:240)
+at io.restassured.internal.mapping.ObjectMapping.deserialize(ObjectMapping.groovy:56)
+at io.restassured.internal.mapping.ObjectMapping$deserialize.call(Unknown Source)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:46)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.as(RestAssuredResponseOptionsGroovyImpl.groovy:231)
+at io.restassured.internal.RestAssuredResponseOptionsImpl.as(RestAssuredResponseOptionsImpl.java:169)
+at com.test.OMRBranchClub.basicAuthLogin(OMRBranchClub.java:38)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+Caused by: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "exception" (class com.pojo.Login_Output_pojo), not marked as ignorable (6 known properties: "cart_count", "status", "role", "message", "data", "refer_msg"])
+ at [Source: (String)"{
+    "message": "SQLSTATE[HY000] [1040] Too many connections (SQL: select * from `g_bus_rule_ref` where `rule_name` = currency limit 1)",
+    "exception": "Illuminate\\Database\\QueryException",
+    "file": "/home/omrbranch/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php",
+    "line": 664,
+    "trace": [
+        {
+            "file": "/home/omrbranch/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php",
+            "line": 624,
+            "fu"[truncated 12817 chars]; line: 3, column: 19] (through reference chain: com.pojo.Login_Output_pojo["exception"])
+at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61)
+at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1127)
+at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:2023)
+at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1700)
+at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1678)
+at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:319)
+at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:176)
+at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323)
+at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4674)
+at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3629)
+at io.restassured.internal.path.json.mapping.JsonPathJackson2ObjectDeserializer.deserialize(JsonPathJackson2ObjectDeserializer.java:28)
+... 46 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- basicAuthLogin -->
+        <test-method status="SKIP" signature="addAddress()[pri:0, instance:com.test.OMRBranchClub@cb5822]" name="addAddress" duration-ms="0" started-at="2022-07-14T17:54:34Z" depends-on-methods="com.test.OMRBranchClub.basicAuthLogin" finished-at="2022-07-14T17:54:34Z">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method OMRBranchClub.addAddress()[pri:0, instance:com.test.OMRBranchClub@cb5822] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method OMRBranchClub.addAddress()[pri:0, instance:com.test.OMRBranchClub@cb5822] depends on not successfully finished methods
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:888)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addAddress -->
+        <test-method status="SKIP" signature="updateAddress()[pri:0, instance:com.test.OMRBranchClub@cb5822]" name="updateAddress" duration-ms="0" started-at="2022-07-14T17:54:34Z" depends-on-methods="com.test.OMRBranchClub.addAddress" finished-at="2022-07-14T17:54:34Z">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method OMRBranchClub.updateAddress()[pri:0, instance:com.test.OMRBranchClub@cb5822] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method OMRBranchClub.updateAddress()[pri:0, instance:com.test.OMRBranchClub@cb5822] depends on not successfully finished methods
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:888)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateAddress -->
+        <test-method status="SKIP" signature="deleteAddress()[pri:0, instance:com.test.OMRBranchClub@cb5822]" name="deleteAddress" duration-ms="0" started-at="2022-07-14T17:54:34Z" depends-on-methods="com.test.OMRBranchClub.updateAddress" finished-at="2022-07-14T17:54:34Z">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method OMRBranchClub.deleteAddress()[pri:0, instance:com.test.OMRBranchClub@cb5822] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method OMRBranchClub.deleteAddress()[pri:0, instance:com.test.OMRBranchClub@cb5822] depends on not successfully finished methods
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:888)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteAddress -->
+      </class> <!-- com.test.OMRBranchClub -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
